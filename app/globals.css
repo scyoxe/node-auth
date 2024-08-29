@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --edges: clamp(5px, 5vw, 10px);
+}
+
+header {
+    padding-left: var(--edges);
+    padding-right: var(--edges);
+    padding-top: var(--edges);
+    padding-bottom: var(--edges);
+}
+
+main {
+    padding-left: var(--edges);
+    padding-right: var(--edges);
+    padding-top: var(--edges);
+    padding-bottom: var(--edges);
+}
+
+.edges {
+    padding-left: var(--edges);
+    padding-right: var(--edges);
+    padding-top: var(--edges);
+    padding-bottom: var(--edges);
+}

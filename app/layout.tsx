@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
-import { Albert_Sans } from 'next/font/google';
+import { Space_Grotesk as font } from 'next/font/google';
 import './globals.css';
 
-const albertSans = Albert_Sans({ subsets: ['latin'] });
+const trispace = font({ subsets: ['latin'] });
 
 export default function RootLayout({
     children,
@@ -11,7 +10,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={albertSans.className}>{children}</body>
+            <body
+                className={[trispace.className, 'h-lvh flex flex-row'].join(
+                    ' '
+                )}>
+                {children}
+            </body>
         </html>
     );
 }
